@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.backdrop {
+  @apply fixed left-0 top-0 h-full w-full flex items-center justify-center;
+  background: #000000e1;
+}
+
+.modal {
+  @apply bg-gray-900 rounded-xl max-w-[1000px] h-auto w-auto flex flex-col justify-evenly m-auto text-center z-50;
+  min-width: clamp(30%, 100px, 20%);
+  min-height: min(50%, 200px); 
+
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+html {
+scroll-behavior: smooth !important;
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-600
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-800
+  }
+  
+  body {
+    @apply bg-gray-900 text-white tracking-wide
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl font-[Raleway]
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl
+  }
+
+  li {
+    @apply cursor-pointer
+  }
+
+  button {
+    @apply shadow-gray-950 uppercase text-white
+  }
+}
